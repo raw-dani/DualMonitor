@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Dual URL Opener",
+    "version": "1.0",
+    "description": "Open two different URLs on two monitors when Chrome starts.",
+    "icons": {
+      "128": "128.png"
+    },
+    "permissions": [
+      "storage", 
+      "tabs",
+      "system.display",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "incognito": "split",
+    "options_page": "options.html",
+    "action": {
+      "default_popup": "options.html",
+      "default_title": "Open URLs on Separate Monitors"
+    },
+    "chrome_url_overrides": {
+      "newtab": "options.html"
+    }
+}  
